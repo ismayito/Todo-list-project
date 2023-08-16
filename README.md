@@ -58,17 +58,12 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new books: Enter the book title and author to add a new book to the list.**
-- **Remove books: Remove books from the list when no longer needed**
-- **Save and remove books from localStorage**
+- **Add new todo Item: Enter the item todo to create list of todo items.**
+- **Mark completed item: When you click on the check box the item is marked as completed**
+- **Save and remove todo items from localStorage**
+- **Clear all completed items on clicking on the clear all completed**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- Live Demo -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-<a href="https://ismayito.github.io/awesome-books-v2/#"> See Project 🚀</a>
 
 <!-- GETTING STARTED -->
 
@@ -83,13 +78,13 @@ To get get a local copy up and running, you can follow these simple steps:
 Clone the repository to your local machine using the following command:
 
 ```sh
-  git clone https://github.com/ismayito/awesome-books-v2.git
+  git clone https://github.com/ismayito/Todo-list-project.git
 ```
 
 Navigate to the project directory:
 
 ```sh
- cd awesome-books-v2
+ cd Todo-list-project
 ```
 
 Open the index.html file in your web browser to view the project:
@@ -104,13 +99,14 @@ That's it! With these simple steps, you should be able to get up and running wit
 
 ### Usage
 
-To use this project, simply visit the following link: https://github.com/ismayito/awesome-books-v2.git
+To use this project, simply visit the following link: https://github.com/ismayito/Todo-list-project.git
 
-- **Open the <a href="https://github.com/ismayito/awesome-books-v2.git">project 🚀</a> in your web browser.**
+- **Open the <a href="https://github.com/ismayito/Todo-list-project.git">project 🚀</a> in your web browser.**
 
-- **Use the provided form to add books to the list.**
+- **Use the provided form to add todo item to the list.**
 
-- **To remove a book, click the "Remove" button next to the book entry.**
+- **To mark an item as completed click on the checkbox**
+- **To clear completed items click on the clear all completed**
 
 <!-- ### Run tests
 
@@ -146,7 +142,7 @@ Example command:
 
 <!-- > Describe 1 - 3 features you will add to the project. -->
 
-- [ ] **Additional pages: More pages will be added to the project to display additional content.**
+- [ ] **Making the list iem editable : The item will have the capability of being edited to have it changed to a new item.**
 - [ ] **Responsive design: The project will be optimized to display properly on different screen sizes, including desktops, tablets, and mobile devices.**
 - [ ] **JavaScript interactivity: Some interactive features will be added using JavaScript to enhance the user experience.**
 

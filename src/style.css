@@ -26,6 +26,9 @@ body {
 .list-item {
   list-style-type: none;
   margin: 10px 0;
+  border: none;
+  width: 95%;
+  padding: 3px 0;
 }
 
 .todo-input {

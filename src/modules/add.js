@@ -4,9 +4,7 @@ import retrieveFromStore from './retrieveFromStore.js';
 
 // Add a todo item to the store;
 const add = () => {
-  const itemFromStore = retrieveFromStore();
-  const listArray = itemFromStore;
-  function Todos(index, description, isCompleted = false) {
+  function Todo(index, description, isCompleted = false) {
     this.index = index;
     this.description = description;
     this.isCompleted = isCompleted;
@@ -16,9 +14,10 @@ const add = () => {
 
   inputField.addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
+      const listArray = retrieveFromStore();
       const inputValue = inputField.value;
       const index = listArray.length;
-      const todoObject = new Todos(index, inputValue);
+      const todoObject = new Todo(index, inputValue);
       listArray.push(todoObject);
       listStore(listArray);
       inputField.value = '';
@@ -27,5 +26,4 @@ const add = () => {
     }
   });
 };
-
 export default add;

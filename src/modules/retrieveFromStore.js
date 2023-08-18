@@ -1,6 +1,6 @@
-const listFromStore = () => {
+const retrieveFromStore = () => {
   const retrieveFromStore = JSON.parse(localStorage.getItem('listStore')) || [];
   return retrieveFromStore;
 };
 
-export default listFromStore;
+export default retrieveFromStore;

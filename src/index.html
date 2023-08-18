@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo-list app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a2d92cea5e.js"
+      defer
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section class="todo-list-section">
       <div class="todo-list" id="todo-list">
         <p class="title">Today`s To Do</p>
+        <div class="welcome-msg"></div>
         <hr />
         <input
           type="text"
@@ -16,6 +26,7 @@
           placeholder="Add to your list..."
         />
         <hr />
+        <div class="todo-list-items"></div>
       </div>
       <div class="button">
         <button class="clear-all" type="button">Clear all completed</button>

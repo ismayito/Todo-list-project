@@ -26,6 +26,12 @@ const displayList = () => {
     deleteButton.setAttribute('id', `btn-${item.index}`);
     deleteButton.style.display = 'none';
 
+    listItem.appendChild(checkbox);
+    listItem.appendChild(todoItem);
+    listItem.appendChild(deleteButton);
+    todoItem.value = item.description;
+    todoList.appendChild(listItem);
+
     // check if checkbox is checked or not and change state
     checkbox.addEventListener('change', () => {
       const isChecked = checkbox.checked;
@@ -58,12 +64,6 @@ const displayList = () => {
       });
       listStore(todoTasks);
     });
-
-    listItem.appendChild(checkbox);
-    listItem.appendChild(todoItem);
-    listItem.appendChild(deleteButton);
-    todoItem.value = item.description;
-    todoList.appendChild(listItem);
   });
 };
 

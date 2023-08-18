@@ -11,7 +11,7 @@ const deleteItem = (id) => {
     item.index = index;
   });
 
-  listStore(returnedItems);
   deleteButton.parentElement.remove();
+  listStore(returnedItems);
 };
 export default deleteItem;

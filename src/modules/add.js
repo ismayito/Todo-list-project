@@ -16,7 +16,7 @@ const add = () => {
     if (event.key === 'Enter') {
       const listArray = retrieveFromStore();
       const inputValue = inputField.value;
-      const index = listArray.length;
+      const index = listArray.length + 1;
       const todoObject = new Todo(index, inputValue);
       listArray.push(todoObject);
       listStore(listArray);

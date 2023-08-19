@@ -5,9 +5,10 @@ const selectItem = (id) => {
   const selectItems = retrieveFromStore();
   selectItems.forEach((item) => {
     if (item.index === id) {
-      item.isCompeted = !item.isCompeted;
+      item.isCompleted = !item.isCompleted;
     }
   });
+
   listStore(selectItems);
   return retrieveFromStore();
 };

@@ -4,6 +4,7 @@ import displayList from './modules/displayList.js';
 import './style.css';
 
 add();
+displayList();
 
 const welcomeMessageContainer = document.querySelector('.welcome-msg');
 document.addEventListener('DOMContentLoaded', () => {

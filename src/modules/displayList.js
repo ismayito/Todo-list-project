@@ -3,15 +3,19 @@ import selectItem from './selectItem.js';
 import deleteItem from './deleteItem.js';
 import listStore from './listStore.js';
 
+// eslint-disable-next-line import/no-cycle
+import clear from './clear.js';
+
 const displayList = () => {
   const todoList = document.querySelector('.todo-list-items');
   const welcomeMessageContainer = document.querySelector('.welcome-msg');
   welcomeMessageContainer.innerHTML = '';
   todoList.innerHTML = '';
 
-  retrieveFromStore().forEach((item) => {
+  const renderTodo = () => retrieveFromStore().forEach((item) => {
     const listItem = document.createElement('div');
     listItem.classList.add('list-div');
+    listItem.setAttribute('id', `list-${item.index}`);
     const todoItem = document.createElement('input');
     todoItem.type = 'text';
     todoItem.classList.add('list-item');
@@ -64,7 +68,14 @@ const displayList = () => {
       });
       listStore(todoTasks);
     });
+
+    // clear all tasks
+    const clearButton = document.querySelector('.clear-all');
+    clearButton.addEventListener('click', () => {
+      clear();
+    });
   });
+  renderTodo();
 };
 
 export default displayList;

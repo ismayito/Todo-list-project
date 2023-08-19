@@ -1,36 +1,18 @@
+import retrieveFromStore from './modules/retrieveFromStore.js';
+import add from './modules/add.js';
+import displayList from './modules/displayList.js';
 import './style.css';
 
-const todoArray = [
-  {
-    description: 'wash car',
-    index: 1,
-    completed: true,
-  },
-  {
-    description: 'Visit the doctor',
-    index: 2,
-    completed: true,
-  },
-  {
-    description: 'Attend prayes',
-    index: 3,
-    completed: true,
-  },
-];
+add();
+displayList();
 
-const todoList = document.getElementById('todo-list');
-
-todoArray.forEach((item) => {
-  const listItem = document.createElement('div');
-  listItem.classList.add('list-div');
-  const todoItem = document.createElement('li');
-  todoItem.classList.add('list-item');
-  const checkbox = document.createElement('input');
-  checkbox.type = 'checkbox';
-  listItem.appendChild(checkbox);
-  listItem.appendChild(todoItem);
-  const line = document.createElement('hr');
-  todoItem.innerHTML = item.description;
-  todoList.appendChild(listItem);
-  todoList.appendChild(line);
+const welcomeMessageContainer = document.querySelector('.welcome-msg');
+document.addEventListener('DOMContentLoaded', () => {
+  if (retrieveFromStore().length === 0) {
+    const welcomeMessage = document.createElement('p');
+    welcomeMessage.innerText = 'Please there are no todo items. Please you can add some';
+    welcomeMessageContainer.appendChild(welcomeMessage);
+  } else {
+    displayList();
+  }
 });

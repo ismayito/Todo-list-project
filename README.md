@@ -23,9 +23,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome Books<a name="about-project"></a>
+# 📖 Interactive Todo list application<a name="about-project"></a>
 
-**A simple JavaScript application to create and manage a list of books.**
+**A simple JavaScript todo list application to create and manage a list of todo-tasks.**
+**In this the user can add a todo item, edit a todo item, select an item and mark it as complete and then delete a number of items or single todo item finished**
 
 ## 🛠 Built With <a name="built-with"></a>
 

@@ -65,6 +65,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+<a href="https://ismayito.github.io/Todo-list-project/"> See Project 🚀</a>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>

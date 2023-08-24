@@ -10,7 +10,9 @@ const deleteItem = (id) => {
     item.index = index;
   });
 
-  deleteButton.parentElement.remove();
+  if (deleteButton) {
+    deleteButton.parentElement.remove();
+  }
   listStore(returnedItems);
 };
 export default deleteItem;

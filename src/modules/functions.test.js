@@ -4,6 +4,7 @@
 
 import add from './add.js';
 import displayList from './displayList.js';
+import deleteItem from './deleteItem.js';
 
 describe('testing add and remove functions', () => {
   test('testing add function', () => {
@@ -22,5 +23,16 @@ describe('testing add and remove functions', () => {
     add();
     displayList();
     expect(addedList).toHaveLength(1);
+  });
+
+  test('testing remove function', () => {
+    // mocking the DOM input element
+    const button = document.createElement('button');
+    button.classList.add('remove');
+    document.body.appendChild(button);
+    const removeFn = document.querySelectorAll('.remove');
+    deleteItem();
+    displayList();
+    expect(removeFn).toHaveLength(1);
   });
 });

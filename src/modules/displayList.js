@@ -9,8 +9,12 @@ import clear from './clear.js';
 const displayList = () => {
   const todoList = document.querySelector('.todo-list-items');
   const welcomeMessageContainer = document.querySelector('.welcome-msg');
-  welcomeMessageContainer.innerHTML = '';
-  todoList.innerHTML = '';
+  if (welcomeMessageContainer) {
+    welcomeMessageContainer.innerHTML = '';
+  }
+  if (todoList) {
+    todoList.innerHTML = '';
+  }
 
   const renderTodo = () => retrieveFromStore().forEach((item) => {
     const listItem = document.createElement('div');

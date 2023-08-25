@@ -4,11 +4,13 @@ import retrieveFromStore from './retrieveFromStore.js';
 const edit = (item) => {
   const todoTasks = retrieveFromStore();
   const editTask = document.getElementById(`input-${item}`);
-  todoTasks.forEach((todoItem) => {
-    if (todoItem.index === item) {
-      todoItem.description = editTask.value;
-    }
-  });
+  if (todoTasks) {
+    todoTasks.forEach((todoItem) => {
+      if (todoItem.index === item) {
+        todoItem.description = editTask.value;
+      }
+    });
+  }
   listStore(todoTasks);
 };
 

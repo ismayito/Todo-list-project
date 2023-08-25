@@ -7,11 +7,12 @@ const clear = () => {
   const todoList = document.querySelector('.todo-list-items');
 
   let taskList = checkStatus();
-  taskList = taskList.filter((item) => item.isCompleted !== true);
+
+  taskList = taskList?.filter((item) => item.isCompleted !== true);
 
   listStore(taskList);
 
-  todoList.innerHTML = '';
+  if (todoList) todoList.innerHTML = '';
   displayList();
 };
 export default clear;

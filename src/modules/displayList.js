@@ -16,7 +16,7 @@ const displayList = () => {
   }
 
   const renderTodo = () =>
-    retrieveFromStore().forEach((item) => {
+    retrieveFromStore()?.forEach((item) => {
       const listItem = document.createElement('div');
       listItem.classList.add('list-div');
       listItem.setAttribute('id', `list-${item.index}`);

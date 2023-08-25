@@ -11,7 +11,7 @@ const deleteItem = (id) => {
       item.index = index;
     });
   }
-  
+
   if (deleteButton) {
     deleteButton.parentElement.remove();
   }

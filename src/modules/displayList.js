@@ -70,6 +70,7 @@ const displayList = () => {
         const clearButton = document.querySelector('.clear-all');
         clearButton.addEventListener('click', () => {
           clear();
+          displayList();
         });
       });
     }

@@ -1,7 +1,5 @@
 import checkStatus from './checkStatus.js';
 import listStore from './listStore.js';
-// eslint-disable-next-line import/no-cycle
-import displayList from './displayList.js';
 
 const clear = () => {
   const todoList = document.querySelector('.todo-list-items');
@@ -13,6 +11,5 @@ const clear = () => {
   listStore(taskList);
 
   if (todoList) todoList.innerHTML = '';
-  displayList();
 };
 export default clear;

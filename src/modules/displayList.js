@@ -1,7 +1,6 @@
 import retrieveFromStore from './retrieveFromStore.js';
 import selectItem from './selectItem.js';
 import deleteItem from './deleteItem.js';
-// eslint-disable-next-line import/no-cycle
 import clear from './clear.js';
 import edit from './edit.js';
 

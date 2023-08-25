@@ -5,6 +5,7 @@
 import add from './add.js';
 import displayList from './displayList.js';
 import deleteItem from './deleteItem.js';
+import edit from './edit.js';
 
 describe('testing add and remove functions', () => {
   test('testing add function', () => {
@@ -35,4 +36,14 @@ describe('testing add and remove functions', () => {
     displayList();
     expect(removeFn).toHaveLength(1);
   });
+
+  test ('testing edit function', () => {
+    const editTask = document.createElement('input');
+    editTask.classList.add('teskEdit');
+    document.body.append(editTask);
+    edit();
+    const newTask = editTask.value;
+    expect(newTask).toBe(editTask.value)
+  })
+
 });

@@ -6,6 +6,9 @@ import add from './add.js';
 import displayList from './displayList.js';
 import deleteItem from './deleteItem.js';
 import edit from './edit.js';
+import selectItem from './selectItem.js';
+import retrieveFromStore from './retrieveFromStore.js';
+import listStore from './listStore.js';
 
 describe('testing add and remove functions', () => {
   test('testing add function', () => {
@@ -43,7 +46,22 @@ describe('testing add and remove functions', () => {
     document.body.append(editTask);
     edit();
     const newTask = editTask.value;
-    expect(newTask).toBe(editTask.value)
+    expect(newTask).toBe(editTask.value);
   })
 
+ test ('testing update status', () => {
+  const id = 1;
+    const mockItems = [
+      { index: 1, description: 'Task 1', isCompleted: false },
+      { index: 2, description: 'Task 2', isCompleted: true },
+    ];
+    selectItem();
+    retrieveFromStore();
+    listStore();
+    const result = selectItem(id);
+    expect(result).toEqual(mockItems);
+    expect(listStore).toHaveBeenCalledWith(mockItems);
+ })
+
 });
+

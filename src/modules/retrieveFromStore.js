@@ -1,6 +1,7 @@
 const retrieveFromStore = () => {
-  const retrieveFromStore = JSON.parse(localStorage.getItem('listStore')) || [];
-  return retrieveFromStore;
+  const retrieveFromStore = localStorage.getItem('listStore');
+  return retrieveFromStore ? JSON.parse(retrieveFromStore) : [];
+
 };
 
 export default retrieveFromStore;

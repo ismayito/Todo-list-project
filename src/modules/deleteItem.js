@@ -11,12 +11,7 @@ const deleteItem = (id) => {
       item.index = index;
     });
   }
-  // const returnedItems = retrieveFromStore().filter((item) => item.index !== id);
-  // update the indices of the remaining items
-  // returnedItems.forEach((item, index) => {
-  //   item.index = index;
-  // });
-
+  
   if (deleteButton) {
     deleteButton.parentElement.remove();
   }
